@@ -38,7 +38,7 @@ result = makit[-1]
 print(result)
 
 #11 문자열에서 여러 문자 뽑아내기
-# 문자열 슬라이싱 [ : ] 
+# 문자열 슬라이싱 [ : : ] 
 
 makit = 'Sieun Woojin!'
 result = makit[2:9]
