@@ -61,3 +61,10 @@ print(makit[ : : -1])
 phone = '010-1234-5678'
 new_phone = phone.replace('-', '.')
 print(new_phone)
+
+#15-1 팰린드롬 ( 회문 ) ex) eye, kayak 
+
+a = 'abbcbba'
+b = a[ : : -1]
+print('a는 팰린드롬입니다. ', a == b )
+
