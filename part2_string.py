@@ -47,3 +47,7 @@ result = makit[0:5]
 print(result)
 result = makit[6:]
 print(result)
+
+#12 동쪽을 찾아라
+makit = '동서남북동서남북동서남북'
+print(makit[ ::4])
