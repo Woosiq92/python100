@@ -55,3 +55,9 @@ print(makit[ ::4])
 #13 문자열 뒤집기 
 makit = '동서남북'
 print(makit[ : : -1])
+
+#14 문자열 바꾸기
+# 문자열 함수 replace 
+phone = '010-1234-5678'
+new_phone = phone.replace('-', '.')
+print(new_phone)
