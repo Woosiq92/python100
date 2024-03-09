@@ -22,3 +22,17 @@ b = float(input())
 
 print("a와 b의 합은", a+b) 
 print("a와 b의 평균값은", (a+b)/2)
+
+
+#10 문자열에서 하나의 문자 뽑아내기
+# 자료형 - 문자열과 배열 인덱싱 ( 0, -1 ) 
+
+makit='Sieun Woojin!'
+result = makit[0]
+print(result)
+
+result = makit[6]
+print(result)
+
+result = makit[-1]
+print(result)
