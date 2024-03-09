@@ -78,3 +78,14 @@ min = a // 60
 sec = a % 60 
 
 print(a ,'초(sec)는', min ,'분(min)' , sec , '초(sec)입니다.')
+
+# 18 7512분은 며칠, 몇 시간, 몇 분일까
+
+num = int(input("분을 입력하세요:"))
+
+day = num // (60 *24) 
+dayremain = num % (60 *24) 
+hour = dayremain // 60
+min = dayremain % 60 
+
+print(num ,'분은', day ,'일' , hour, '시간', min , '분입니다.')
