@@ -1,1 +1,39 @@
+#32 두수 비교하기 
 
+x = int(input('첫 번째 정수를 입력하세요:'))
+y = int(input('두 번째 정수를 입력하세요:'))
+
+if x > y : 
+    print("makit")
+else: 
+    print('woojin')
+
+#33 세 수 비교하기 
+
+a = int(input('첫 번째 정수를 입력하세요:'))
+b = int(input('두 번째 정수를 입력하세요:'))
+c = int(input('세 번째 정수를 입력하세요:'))
+if a % 2 == 1 : 
+    print(a)
+if b % 2 == 1 : 
+    print(b)
+if c % 2 == 1 : 
+    print(c)
+
+# 34 홀수찾기
+
+a = int(input('첫 번째 정수를 입력하세요:'))
+b = int(input('두 번째 정수를 입력하세요:'))
+c = int(input('세 번째 정수를 입력하세요:'))
+if a % 2 == 1 : 
+    print(a, '홀수')
+else: 
+    print(a, '짝수')
+if b % 2 == 1 : 
+    print(b, '홀수')
+else: 
+    print(b, '짝수')
+if c % 2 == 1 : 
+    print(c, '홀수')
+else: 
+    print(c, '짝수')
