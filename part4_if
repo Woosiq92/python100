@@ -53,3 +53,71 @@ if a < 0 and a % 2 == 0 :
 if a < 0 and a % 2 == 1 : 
     print("음수이고 홀수 ")
 
+#35-2 and 안쓰기 
+
+a = int(input())
+if a > 0 : 
+    if a % 2 == 0 : 
+        print("양수이고 짝수 ")
+    else: 
+        print("양수이고 홀수 ")
+    
+elif a < 0 
+    if a % 2 == 0 : 
+        print("음수이고 짝수 ")
+
+    else:
+        print("음수이고 홀수 ")
+
+#36. 성적 결과 
+
+a = int(input("코딩 점수를 입력하세요:"))
+if a >= 90 : 
+    print("A학점")
+elif a >= 80 : 
+    print("B학점")
+elif a >= 70 : 
+    print("C학점")
+elif a >= 60 : 
+    print("D학점")
+else: 
+    print("F학점")
+
+# 37. 입력에 따라 이름 출력 
+
+n = input()
+
+if n == "m":
+    print('makit')
+elif n == "j":
+    print('james')
+elif n == "w":
+    print('woojin')
+elif n == "s":
+    print('sieun')
+else: 
+    print("howard")
+
+#38. 계절 
+
+a = int(input("몇 월 달인가요?"))
+
+if a in [12, 1, 2]:
+    print('겨울')
+elif a in [3, 4, 5]:
+    print('봄')
+elif a in [6, 7, 8]:
+    print('여름')
+else:
+    print('가을')
+
+#39. 31일 
+
+a = int(input("몇 월인가요?"))
+
+if a == 2 :
+    print(a, "월은 28일까지 있습니다")
+elif a in [4, 6, 9, 11]:
+    print(a, "월은 30일까지 있습니다")
+else:
+    print(a, "월은 31일까지 있습니다")
