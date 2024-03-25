@@ -37,3 +37,19 @@ if c % 2 == 1 :
     print(c, '홀수')
 else: 
     print(c, '짝수')
+
+# 35. 4가지 경우의 수 
+
+a = int(input())
+if a > 0 and a % 2 == 0 : 
+    print("양수이고 짝수 ")
+
+elif a > 0 and a % 2 == 1 : 
+    print("양수이고 홀수 ")
+    
+if a < 0 and a % 2 == 0 : 
+    print("음수이고 짝수 ")
+
+if a < 0 and a % 2 == 1 : 
+    print("음수이고 홀수 ")
+
