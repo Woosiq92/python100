@@ -121,3 +121,71 @@ elif a in [4, 6, 9, 11]:
     print(a, "월은 30일까지 있습니다")
 else:
     print(a, "월은 31일까지 있습니다")
+
+#40. 까다로운 놀이기구 
+
+a = input("이름을 입력하세요:")
+b = float(input("키를 입력하세요:"))
+
+if a[0] == "m" or ( b >= 150 and b < 170 ) :
+    print("탈 수 있어요")
+else: 
+    print("탈 수 없어요")
+
+# 41 . 문제 오류 
+
+b = float(input("키를 입력하세요:"))
+
+if ( b >= 175 and b <= 180 ) or ( b >= 150 and b < 170 ) :
+    print("탈 수 있어요")
+else: 
+    print("탈 수 없어요")
+
+
+#42. 까다로운 놀이기구 2 
+
+b = float(input("키를 입력하세요:"))
+a = input("성별을 입력하세요:")
+
+if a == "여자" and ( b >= 150 and b < 170 ) or (b % 5== 0) :
+    print("탈 수 있어요")
+else: 
+    print("탈 수 없어요")
+
+#43. 터널 통과하기 - 이해하기 
+
+a, b, c = map ( int, input().split() ) 
+
+if a > 150 and b > 150 and c > 150: 
+     print('터널 통과 가능 ')
+else: 
+    print('터널 통과 불가능 ')
+
+# 44. 윤년 ( 힌트 잘못됨 ) 
+
+year = int(input("연도를 입력하세요:"))
+
+if (year % 4 == 0 and year % 100 != 0 ) or year % 400 == 0:
+    print(year, "년은 윤년입니다")
+else: 
+    print(year, "년은 윤년이 아닙니다")
+
+# 45. 주민등록 번호 분석기 
+
+n = input("주민등록번호 입력:")
+
+century1 = '19'
+century2 = '20' 
+
+if n[7] == '2': 
+    print("여자", century1+n[:2], '년 출생')
+
+elif n[7] == '1': 
+    print("남자", century1+n[:2], '년 출생')
+
+elif n[7] == '4': 
+    print("여자", century2+n[:2], '년 출생')
+
+elif n[7] == '3': 
+    print("남자", century2+n[:2], '년 출생')
+
