@@ -1,0 +1,5 @@
+#49. 로켓 발사1 
+
+for i in range(1, 11): 
+    print(i)
+print('발사!')
