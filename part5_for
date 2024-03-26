@@ -3,3 +3,11 @@
 for i in range(1, 11): 
     print(i)
 print('발사!')
+
+#50. 로켓 발사2 
+
+n = 1 
+while n < 11 : 
+    print(n)
+    n += 1 
+print('발사!')
