@@ -91,6 +91,26 @@ for i in range(a, b+1):
 
 print("%d부터 %d까지 짝수들만의 합은 %d" %(a, b, sum))
 
+# 58. 이중반복문 
+
+cnt = 0 
+for i in range(1, 5):
+    for j in range(4, 8): 
+        print('첫 번째 주사위 값', i , '두 번째 주사위 값', j, '주사위 합', i+j)
+        cnt += 1 
+print('가능한 첫 번째 두 번째 주사위의 경우의 수', cnt)
+
+#59. rgb 색깔 가짓수 
+
+color = 0 
+for i in range(256): 
+    for j in range(256): 
+        for k in range(256): 
+            color += 1 
+print('가능한 색깔 개수는', color)
+
+
+
 
 
 
