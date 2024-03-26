@@ -28,3 +28,32 @@ for i in range(5):
         else: 
             print(' ', end='')
     print()
+
+#63 삼각형 별찍기 
+
+for i in range(5, 0, -1): 
+    for j in range(i): 
+        print("*", end = '')
+    print()
+
+
+#삼각형 별찍기2 
+
+for i in range(1, 6, 2):  # 1부터 5까지 2씩 증가
+    print(' ' * ((5 - i) // 2) + '*' * i)  # 공백은 (5-i)//2 개, 별은 i개
+
+
+j = 0 
+for i in range(1,4): 
+    print(" "*(3-i), end = "")
+    print("*"*(i+j))
+    j +=1
+
+
+height = 3  # 총 줄 수
+for i in range(1, height * 2, 2):
+    for j in range((height * 2 - 1 - i) // 2):  # 왼쪽 공백을 찍는 반복문
+        print(" ", end="")
+    for k in range(i):  # 별을 찍는 반복문
+        print("*", end="")
+    print()  # 한 줄을 다 찍고 나면 줄바꿈
