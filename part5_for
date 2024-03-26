@@ -11,3 +11,63 @@ while n < 11 :
     print(n)
     n += 1 
 print('발사!')
+
+#51. 로벳 발사 10초전 
+
+n = int(input("카운트다운 몇 초 전인가요?"))
+for i in range(n, 0, -1): 
+    print(i)
+print("발사!")
+
+# 52 . 1~ n 까지 합 
+
+n = int(input())
+sum = 0 
+for i in range(1, n+1): 
+    sum += i 
+print("1부터", n ,"까지 모두 더한 합은", sum)
+
+# 52-1 369 게임 
+
+#53. 1 ~ n 까지 합 while 
+
+n = int(input())
+i = 1 
+sum = 0 
+while i < n+1 :
+    sum += i
+    i += 1 
+print("1부터", n ,"까지 모두 더한 합은", sum)
+
+#53-2, 3 369 게임 
+
+# 54. 음수가 나올 때까지 반복하기 
+
+while True: 
+    n = int(input("숫자를 입력하세요 "))
+    if n >= 0 : 
+        print('입력된 숫자는', n)
+    else:
+        break
+print('종료합니다')
+
+#55. 옆으로 출력하기 
+
+for i in range(1, 11): 
+    print(i, end= ' ')
+
+# 56 1+2+3 = 6
+
+a = int(input("첫 번째 숫자를 입력하세요"))
+b = int(input("두 번째 숫자를 입력하세요"))
+sum = 0
+for i in range(a, b+1): 
+    sum += i 
+    if i != b: 
+        print(i, end= '+')
+    elif i == b: 
+        print( '%d= %d' % ( i, sum) )
+
+
+
+
