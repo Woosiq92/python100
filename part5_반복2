@@ -57,3 +57,23 @@ for i in range(1, height * 2, 2):
     for k in range(i):  # 별을 찍는 반복문
         print("*", end="")
     print()  # 한 줄을 다 찍고 나면 줄바꿈
+
+# 65 . x 모양 별찍기 
+
+- step1 : 대각선 
+for i in range(10): 
+    for j in range(10): 
+        if i == j : 
+            print("*", end= '')
+        else: 
+            print(" ", end = "")
+    print()
+
+-step2 : 반대 대각선 
+for i in range(10): 
+    for j in range(10): 
+        if i == j or i == (9-j): 
+            print("*", end= '')
+        else: 
+            print(" ", end = "")
+    print()
