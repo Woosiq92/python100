@@ -1,0 +1,12 @@
+#70 최소 숫자 
+
+a, b, c = map (int, input().split())
+
+if a > b and c> b : 
+    print(b)
+if b > c and a > c : 
+    print(c)
+if c > a and b > a : 
+    print(a)
+
+
