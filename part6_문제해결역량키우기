@@ -10,3 +10,21 @@ if c > a and b > a :
     print(a)
 
 
+# 71 터널 통과하기 - list, map 
+
+n = int(input())
+a = list(map(int, input().split()))
+t = []
+
+for i in range(3):
+    if a[i] <= n :
+        t.append(a[i])
+
+if t == []: 
+    print("터널 통과 가능")
+else: 
+    print("터널 통과 불가능")
+    for i in t: 
+        print(i)
+
+
