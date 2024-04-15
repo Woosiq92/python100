@@ -119,9 +119,40 @@ for i in range(4):
     n = n // 10 
 print('각 자릿수들의 합은', sum)
 
+#78 카이사르 암호 
+
+m = input()
+for i in m:
+    n = ((ord(i)-65)+3) % 26 
+    print(chr(n + 65), end = '')
+
+#79 소문자는 대문자로, 대문자는 소문자로 변환하기 
+
+n = input()
+result = []
+
+for i in n: 
+    if i >= 'a' and i <='z':
+        u = i.upper()
+        result.append(u)
+    else: 
+        l = i.lower()
+        result.append(l)
+print("".join(result))
 
 
+n = input()
+result = ""
 
-
+for i in n: 
+    if i >= 'a' and i <='z':
+        i = ord(i)-32 
+        result += chr(i)
+    elif i >="A" and i <='Z':
+        i = ord(i)+32
+        result += chr(i)
+    else: 
+        result += i 
+print(result)
 
 
