@@ -1,1 +1,108 @@
 
+#89 중복 제거 
+
+a = [1, 2, 1, 1, 2, 3, 4, 1, 5, 2, 1, 5]
+a = set(a)
+a = list(a)
+print(a)
+
+# 90 집합 추가 , 삭제 
+
+a = {'메이킷', '우진', '시은', '소피아'}
+a.add('하워드')     # 집합 a에 '하워드' 추가
+print(a)
+a.discard('소피아') # 집합 b에  '소피아' 삭제
+print(a)
+
+#91 집합 연산 
+
+hawaii = {'윤진', '시은', '우진'}
+italia = {'형우', '윤진', '시은'}
+dubai = {'시은', '우진', '메이킷'}
+
+print('하와이, 이탈리아, 두바이 모두 여행을 다녀온 사람은?')
+name = hawaii & italia & dubai # & 교집합 연산을 통해 하와이,이탈리아,두바이 모두 다녀온 사람 집합 만들기 
+print(name)
+
+print('하와이 또는 이탈리아 여행을 다녀온 사람은?')
+name = hawaii | italia # | 합집합 연산을 통해 하와이 또는 이탈리아 둘 중에 한 곳이라도 다녀온 사람 집합 만들기
+print(name)
+
+print('두바이 여행은 다녀왔고 하와이와 이탈리아 여행 경험이 없는 사람은?')
+name = dubai - hawaii - italia # - 차집합 연산을 통해 집합에서 다른 집합의 원소를 빼기
+print(name)
+
+#92 사용자 정의 함수 
+def makit(n):
+    sum = 0 
+    for i in range(1, n+1): 
+        sum += i 
+    print("1부터", n, "까지 합은" ,sum, "입니다.")
+
+makit(10)
+makit(100)
+
+#93 함수값 돌려주기 
+
+def makit(n1, n2):
+    sum = 0
+    for i in range(n1, n2+1): 
+        sum += i 
+    return sum
+
+n1 = int(input('첫 번째 숫자를 입력하세요'))
+n2 = int(input('두 번째 숫자를 입력하세요'))
+
+print(n1, '+ ... +', n2, '=', makit(n1,n2))
+
+#94 또다른 함수 호출 
+
+def makit(n1,n2): # 두 숫자를 입력받은 함수 
+    x = makit_abs(n1) # 숫자 하나를 입력받아 절댓값을 보내주는 함수 makit_abs
+    y = makit_abs(n2) # 두 번째 숫자 n2의 절댓값을 구해 y에 저장
+
+    if x > y: # 두 숫자 n1,n2의 절댓값 x,y의 값 비교
+        print(n1,n2,'절댓값이 큰 수는: ',n1)
+    else:
+        print(n1,n2,'절댓값이 큰 수는: ',n2)
+
+def makit_abs(n):   # 숫자 하나를 입력받아 절댓값을 구하는 함수
+    if n < 0 : 
+        return -1*n 
+    else: 
+        return n 
+
+makit(11,-13)
+makit(15,79)
+
+#95 무지개 장갑 
+
+left  = ['초록', '초록', '빨강', '노랑', '노랑', '파랑', '남색', '보라']
+right = ['파랑', '초록', '초록', '보라', '보라', '노랑', '빨강', '빨강', '파랑']
+
+def makit(left,right):
+    color = ['빨강', '주황', '노랑', '초록', '파랑', '남색', '보라']
+
+    # num = [0]*len(color) 또는 num = [0 for i in range(7)]
+
+    left_num = [0, 0, 0, 0, 0, 0, 0] # 무지개 색깔 순서대로 왼손 장갑 개수
+    right_num = [0, 0, 0, 0, 0, 0, 0] # 무지가 색깔 순서대로 오른손 장갑 개수
+    
+    for i in left : 
+        idx = color.index(i)
+        left_num[idx] += 1 
+        
+    for j in right: 
+        idx = color.index(j)
+        right_num[idx] += 1 
+        
+    total = 0
+    for i in range(7):
+        cnt = min (left_num[i], right_num[i])
+        print(color[i], '색으로 만들 수 있는 장갑은', cnt, '개')
+        total += cnt 
+
+    return total
+print('최대로 만들 수 있는 장갑 쌍은', makit(left,right), '개')
+
+#96 괄호 검사기 
