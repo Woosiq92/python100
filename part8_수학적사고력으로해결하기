@@ -106,3 +106,87 @@ def makit(left,right):
 print('최대로 만들 수 있는 장갑 쌍은', makit(left,right), '개')
 
 #96 괄호 검사기 
+n = input('괄호의 자료를 입력하세요:')
+def makit(n):
+    s = [ ]
+    for i in n : 
+        if i == '(': 
+            s.append (i)
+        else: 
+            if s == []: 
+                return False 
+            s.pop()
+    if s == []: 
+        return True 
+    else: 
+        return False 
+
+if makit(n): # 괄호 검사 함수 호출
+    print('성공')
+else:
+    print('실패')
+
+
+#97 정렬 
+
+a = [12, 23, 1, 15, 75, 79, 19]
+
+a.sort()
+
+print(a) # 오름차순 정렬
+
+b = [12, 23, 1, 15 ,75, 79, 19]
+
+b.sort(reverse=True)
+
+print(b) # 내림차순 정렬
+
+# 98 숫자 정렬
+
+a = [12, 23, 1, 15, 75, 79, 19]
+
+b = sorted(a)
+
+print(a)
+
+print(b)
+
+c = [12, 23, 1, 15, 75, 79, 19]
+
+d = sorted(c, reverse = True)
+
+print(c)
+
+print(d)
+
+#99 등수 
+
+name = ['메이킷', '소피아', '우진', '시은', '하워드'] # 학생 이름 리스트
+score = [92, 75, 95, 96, 89] # 학생 점수 리스트
+
+n = int(input('몇 등 학생 자료를 알고 싶나요? '))
+
+score2 = sorted(score, reverse = True)
+a = score2[n-1]
+idx = score.index(a)
+
+print(n, '등 학생은', a, '점이고 이름은', name[idx], '입니다') # 결과 출력
+
+#100 선택정렬 
+a = [13, 7, 2, 199, 24, 5]
+
+def makit_selection(a):
+    print(a)
+    for i in range(len(a)-1): 
+        idx = i 
+        for j in range(i+1, len(a)): 
+            if a[j] < a [idx]: 
+                idx = j 
+        a[i], a[idx] = a[idx], a[i]
+        print(a)
+    return a 
+
+       
+print('최종 정렬 결과', makit_selection(a))
+
+
